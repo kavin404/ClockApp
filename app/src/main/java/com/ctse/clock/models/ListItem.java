@@ -1,16 +1,14 @@
-package com.ctse.clock;
-
-/**
- * Created by Kavindu on 3/25/2018.
- */
+package com.ctse.clock.models;
 
 public class ListItem {
     private String head;
     private String desc;
+    private boolean is24;
 
-    public ListItem(String head, String desc) {
+    public ListItem(String head, String desc, boolean is24) {
         this.head = head;
         this.desc = desc;
+        this.is24 = is24;
     }
 
     public String getHead() {

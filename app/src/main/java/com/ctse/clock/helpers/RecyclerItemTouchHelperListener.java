@@ -6,6 +6,6 @@ import android.support.v7.widget.RecyclerView;
  * Created by Kavindu on 3/25/2018.
  */
 
-interface RecyclerItemTouchHelperListner {
+public interface RecyclerItemTouchHelperListener {
     void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position);
 }

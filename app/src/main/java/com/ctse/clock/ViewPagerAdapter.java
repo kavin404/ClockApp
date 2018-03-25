@@ -1,8 +1,41 @@
 package com.ctse.clock;
 
-/**
- * Created by Kavindu on 3/25/2018.
- */
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 
-public class ViewPagerAdapter {
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class ViewPagerAdapter  extends FragmentPagerAdapter{
+
+    private final List<Fragment> listFragment = new ArrayList();
+    private final List<String> listTitles = new ArrayList();
+    public ViewPagerAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        return listFragment.get(position);
+    }
+
+    @Override
+    public int getCount() {
+        return listFragment.size();
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return listTitles.get(position);
+    }
+
+    public void addFragment(Fragment fragment, String title){
+        this.listFragment.add(fragment);
+        this.listTitles.add(title);
+    }
 }
