@@ -1,9 +1,7 @@
-package com.ctse.clock;
+package com.ctse.clock.worldClock;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +14,7 @@ import android.view.ViewGroup;
 import com.ctse.clock.R;
 import com.ctse.clock.helpers.RecyclerItemTouchHelper;
 import com.ctse.clock.helpers.RecyclerItemTouchHelperListener;
-import com.ctse.clock.models.ListItem;
+import com.ctse.clock.models.WorldClockListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +22,7 @@ import java.util.List;
 public class WorldClockFragment extends Fragment implements RecyclerItemTouchHelperListener  {
     View v;
     private RecyclerView recyclerView;
-    private List<ListItem> list;
+    private List<WorldClockListItem> list;
     private ListAdapter listAdapter;
     @Nullable
     @Override
@@ -41,7 +39,7 @@ public class WorldClockFragment extends Fragment implements RecyclerItemTouchHel
         for(int i=0;i<4;i++){
             header = "12:45 AM";
             description = " Affrica ";
-            ListItem li = new ListItem(header,description,true);
+            WorldClockListItem li = new WorldClockListItem(header,description,true);
             list.add(li);
         }
 
@@ -54,7 +52,7 @@ public class WorldClockFragment extends Fragment implements RecyclerItemTouchHel
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
         if(viewHolder instanceof ListAdapter.ViewHolder){
-            ListItem item = list.get(viewHolder.getAdapterPosition());
+            WorldClockListItem item = list.get(viewHolder.getAdapterPosition());
             int deleteIndex = viewHolder.getAdapterPosition();
             listAdapter.removeItem(deleteIndex);
 //            CoordinatorLayout root = findViewById(R.id.root_layout);

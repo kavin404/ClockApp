@@ -1,7 +1,9 @@
-package com.ctse.clock;
+package com.ctse.clock.worldClock;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.ctse.clock.R;
 
 public class AddNewWorldClock extends AppCompatActivity {
 

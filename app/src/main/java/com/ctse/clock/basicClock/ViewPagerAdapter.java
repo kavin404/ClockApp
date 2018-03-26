@@ -1,4 +1,4 @@
-package com.ctse.clock;
+package com.ctse.clock.basicClock;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

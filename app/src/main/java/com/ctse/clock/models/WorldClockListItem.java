@@ -1,11 +1,11 @@
 package com.ctse.clock.models;
 
-public class ListItem {
+public class WorldClockListItem {
     private String head;
     private String desc;
     private boolean is24;
 
-    public ListItem(String head, String desc, boolean is24) {
+    public WorldClockListItem(String head, String desc, boolean is24) {
         this.head = head;
         this.desc = desc;
         this.is24 = is24;

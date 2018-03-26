@@ -1,4 +1,4 @@
-package com.ctse.clock;
+package com.ctse.clock.basicClock;
 
 
 import android.content.Context;
@@ -16,6 +16,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.Time;
 import android.view.View;
+
+import com.ctse.clock.R;
+import com.ctse.clock.alarm.AlarmFragment;
+import com.ctse.clock.worldClock.WorldClockFragment;
 
 public class MainActivity extends AppCompatActivity {
     private Handler handler;

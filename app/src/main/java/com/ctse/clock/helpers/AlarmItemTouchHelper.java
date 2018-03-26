@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
-import com.ctse.clock.AlarmListAdapter;
+import com.ctse.clock.alarm.AlarmListAdapter;
 
 public class AlarmItemTouchHelper extends ItemTouchHelper.SimpleCallback {
 

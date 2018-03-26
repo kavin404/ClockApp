@@ -1,4 +1,4 @@
-package com.ctse.clock;
+package com.ctse.clock.worldClock;
 
 
 import android.content.Context;
@@ -10,17 +10,18 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ctse.clock.models.ListItem;
+import com.ctse.clock.R;
+import com.ctse.clock.models.WorldClockListItem;
 
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
-    private List<ListItem> list;
+    private List<WorldClockListItem> list;
     private Context context;
 
 
-    public ListAdapter(List<ListItem> list, Context context) {
+    public ListAdapter(List<WorldClockListItem> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -35,7 +36,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
-        ListItem listItem = list.get(position);
+        WorldClockListItem listItem = list.get(position);
         holder.header.setText(listItem.getHead());
         holder.description.setText(listItem.getDesc());
     }
@@ -51,7 +52,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         notifyItemRemoved(position);
     }
 
-    public void restoreItem(ListItem item, int position){
+    public void restoreItem(WorldClockListItem item, int position){
         list.add(position,item);
         notifyItemInserted(position);
     }

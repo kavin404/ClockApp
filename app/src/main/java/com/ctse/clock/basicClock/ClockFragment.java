@@ -1,4 +1,4 @@
-package com.ctse.clock;
+package com.ctse.clock.basicClock;
 
 
 import android.content.Context;
@@ -18,6 +18,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.ctse.clock.R;
 
 
 public class ClockFragment extends Fragment implements Runnable {

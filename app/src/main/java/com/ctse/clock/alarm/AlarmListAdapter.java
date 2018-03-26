@@ -1,4 +1,4 @@
-package com.ctse.clock;
+package com.ctse.clock.alarm;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,17 +8,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.ctse.clock.models.ListItem;
+
+import com.ctse.clock.R;
+import com.ctse.clock.models.WorldClockListItem;
 import java.util.List;
 
 
 public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.ViewHolder> {
 
-    private List<ListItem> list;
+    private List<WorldClockListItem> list;
     private Context context;
 
 
-    public AlarmListAdapter(List<ListItem> list, Context context) {
+    public AlarmListAdapter(List<WorldClockListItem> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -28,12 +30,12 @@ public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.View
     public AlarmListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.alarm_list_item, parent, false);
-        return new com.ctse.clock.AlarmListAdapter.ViewHolder(view);
+        return new AlarmListAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ListItem listItem = list.get(position);
+        WorldClockListItem listItem = list.get(position);
         holder.header.setText(listItem.getHead());
         holder.description.setText(listItem.getDesc());
     }
@@ -50,7 +52,7 @@ public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.View
         notifyItemRemoved(position);
     }
 
-    public void restoreItem(ListItem item, int position) {
+    public void restoreItem(WorldClockListItem item, int position) {
         list.add(position, item);
         notifyItemInserted(position);
     }
