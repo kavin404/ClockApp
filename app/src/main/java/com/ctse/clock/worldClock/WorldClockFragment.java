@@ -10,6 +10,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextClock;
 
 import com.ctse.clock.R;
 import com.ctse.clock.helpers.RecyclerItemTouchHelper;
@@ -24,6 +25,9 @@ public class WorldClockFragment extends Fragment implements RecyclerItemTouchHel
     private RecyclerView recyclerView;
     private List<WorldClockListItem> list;
     private ListAdapter listAdapter;
+    private String timeZones[] ={"GMT+9:00","GMT+13:00","GMT+11:00","GMT-9:00","GMT+0:00","GMT+8:00","GMT+1:00","GMT+6:00","GMT-6:00","GMT-5:00","GMT+3:00","GMT+8:00"};
+    private String country[] ={"Japan","New Zealand","Australia","USA","UK","China","France","Russia","Canada","Mexico","Turkey","Singapore"};
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -35,10 +39,12 @@ public class WorldClockFragment extends Fragment implements RecyclerItemTouchHel
         recyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
+
         String header,description ;
-        for(int i=0;i<4;i++){
-            header = "12:45 AM";
-            description = " Affrica ";
+        for(int i=0;i<timeZones.length;i++){
+
+            header = timeZones[i];
+            description = country[i];
             WorldClockListItem li = new WorldClockListItem(header,description,true);
             list.add(li);
         }

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextClock;
 import android.widget.TextView;
 
 import com.ctse.clock.R;
@@ -37,7 +38,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
         WorldClockListItem listItem = list.get(position);
-        holder.header.setText(listItem.getHead());
+        holder.textClock.setTimeZone(listItem.getHead());
         holder.description.setText(listItem.getDesc());
     }
 
@@ -58,14 +59,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView header;
+        public TextClock textClock;
         public TextView description;
         public LinearLayout view_background;
 
         public ViewHolder(View itemView){
             super(itemView);
 
-            header = (TextView) itemView.findViewById(R.id.header);
+            textClock =(TextClock) itemView.findViewById(R.id.header);
             description = (TextView) itemView.findViewById(R.id.description);
             view_background = itemView.findViewById(R.id.background);
         }

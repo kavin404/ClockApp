@@ -38,14 +38,15 @@
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:background="@color/background">
-                <TextView
+                <TextClock
                     android:id="@+id/header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text ="Heading"
-                    android:fontFamily="@font/digital"
                     android:textColor="#fff"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:timeZone="@+id/header"
+                    android:format12Hour="hh:mm a"
+                    />
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
