@@ -3,7 +3,9 @@ package com.ctse.clock.alarm;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Main2Activity extends AppCompatActivity {
+import com.ctse.clock.R;
+
+public class AddNewAlarm extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

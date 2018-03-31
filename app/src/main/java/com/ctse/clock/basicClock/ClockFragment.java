@@ -36,13 +36,13 @@ public class ClockFragment extends Fragment implements Runnable {
         v = inflater.inflate(R.layout.clock_fragment,container,false);
         mTime = new Time();
 
-        l = v.findViewById(R.id.linearLayout);
-        mTime.setToNow();
-        dv = new ClockFragment.drawingView(v.getContext(),mTime.hour,mTime.minute,mTime.second,mTime.weekDay,mTime.monthDay,getBatteryLevel());
-        l.addView(dv);
-
-        handler = new Handler();
-        handler.postDelayed(this,1000);
+//        l = v.findViewById(R.id.linearLayout);
+//        mTime.setToNow();
+//        dv = new ClockFragment.drawingView(v.getContext(),mTime.hour,mTime.minute,mTime.second,mTime.weekDay,mTime.monthDay,getBatteryLevel());
+//        l.addView(dv);
+//
+//        handler = new Handler();
+//        handler.postDelayed(this,1000);
         return v;
     }
 

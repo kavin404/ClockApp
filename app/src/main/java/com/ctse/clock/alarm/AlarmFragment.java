@@ -1,9 +1,12 @@
 package com.ctse.clock.alarm;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,7 +40,14 @@ public class AlarmFragment extends Fragment implements RecyclerItemTouchHelperLi
         listAdapter = new AlarmListAdapter(list,v.getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
+        FloatingActionButton fab = v.findViewById(R.id.fab1);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),AddNewAlarm.class);
+                startActivity(intent);
+            }
+        });
         String header,description ;
         for(int i=0;i<4;i++){
             header = "12:45 AM";
