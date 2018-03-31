@@ -1,4 +1,4 @@
-package com.ctse.clock.basicClock;
+package com.ctse.clock.basic;
 
 
 import android.content.Context;
@@ -7,11 +7,8 @@ import android.content.IntentFilter;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.os.BatteryManager;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -22,7 +19,7 @@ import android.view.View;
 
 import com.ctse.clock.R;
 import com.ctse.clock.alarm.AlarmFragment;
-import com.ctse.clock.worldClock.WorldClockFragment;
+import com.ctse.clock.world.WorldClockFragment;
 
 public class MainActivity extends AppCompatActivity {
     private Handler handler;
@@ -49,14 +46,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_alarm_white_24dp);
         tabLayout.getTabAt(2).setIcon(R.drawable.icons8_globe_24dp);
 
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
 //        mTime = new Time();
 //        r = new Runnable() {
@@ -73,17 +62,7 @@ public class MainActivity extends AppCompatActivity {
 //        handler.postDelayed(r,1000);
 
     }
-    public void buttonClick(View v) {
-        switch(v.getId()) {
-            case R.id.fab1:
-//                Intent myIntent = new Intent();
-//                myIntent.setClassName(your_package_name_string, your_activity_name_string);
-//                // for ex: your package name can be "com.example"
-//                // your activity name will be "com.example.Contact_Developer"
-//                startActivity(myIntent);
-                break;
-        }
-    }
+
     public float getBatteryLevel(){
         Intent batteryIntent = registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
         int level = batteryIntent.getIntExtra(BatteryManager.EXTRA_LEVEL,-1);

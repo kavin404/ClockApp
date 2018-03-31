@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
-import com.ctse.clock.worldClock.ListAdapter;
+import com.ctse.clock.world.ListAdapter;
 
 public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {
 

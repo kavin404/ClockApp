@@ -1,4 +1,4 @@
-package com.ctse.clock.worldClock;
+package com.ctse.clock.world;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 import com.ctse.clock.R;
@@ -64,7 +64,6 @@ public class NewWorldClockListAdapter extends RecyclerView.Adapter<NewWorldClock
 
     @Override
     public void onClick(View v) {
-        //int itemPosition = ((RecyclerView)this.view.findViewById(R.id.list_new_world)).getChildLayoutPosition(v);
         String country = (String)((TextView)(v.findViewById(R.id.header))).getText();
         boolean checked = ((ImageView)v.findViewById(R.id.checked_item)).getVisibility() != View.VISIBLE;
         DBHelper db = new DBHelper(context);
@@ -74,8 +73,6 @@ public class NewWorldClockListAdapter extends RecyclerView.Adapter<NewWorldClock
         }else{
             ((ImageView)v.findViewById(R.id.checked_item)).setVisibility(View.INVISIBLE);
         }
-
-        Toast.makeText(this.context, country, Toast.LENGTH_LONG).show();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

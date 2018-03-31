@@ -10,14 +10,14 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".basicClock.MainActivity">
+        <activity android:name=".basic.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".worldClock.AddNewWorldClock" />
+        <activity android:name=".world.AddNewWorldClock" />
         <activity android:name=".alarm.AddNewAlarm"></activity>
     </application>
 

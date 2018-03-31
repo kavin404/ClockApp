@@ -1,4 +1,4 @@
-package com.ctse.clock.worldClock;
+package com.ctse.clock.world;
 
 
 import android.content.Context;

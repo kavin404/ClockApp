@@ -1,4 +1,4 @@
-package com.ctse.clock.basicClock;
+package com.ctse.clock.basic;
 
 
 import android.content.Context;

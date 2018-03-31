@@ -1,10 +1,12 @@
-package com.ctse.clock.worldClock;
+package com.ctse.clock.world;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import com.ctse.clock.R;
 import com.ctse.clock.helpers.DBHelper;
 import com.ctse.clock.models.CountryItem;
@@ -12,7 +14,7 @@ import com.ctse.clock.models.CountryItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddNewWorldClock extends AppCompatActivity{
+public class AddNewWorldClock extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<CountryItem> list;
     private NewWorldClockListAdapter newWolrdClockListAdapter;
@@ -29,11 +31,15 @@ public class AddNewWorldClock extends AppCompatActivity{
         recyclerView.setHasFixedSize(true);
         list = new ArrayList<>();
         newWolrdClockListAdapter = new NewWorldClockListAdapter(list, getApplicationContext());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        if (getResources().getConfiguration().orientation == 2) {
+            recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+        } else {
+            recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        }
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         String header, description;
         for (int i = 0; i < country.length; i++) {
-            list.add(new CountryItem(country[i], timeZones[i],db.read(country[i])));
+            list.add(new CountryItem(country[i], timeZones[i], db.read(country[i])));
         }
 
         recyclerView.setAdapter(newWolrdClockListAdapter);
