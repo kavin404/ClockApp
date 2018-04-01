@@ -68,68 +68,6 @@
                 android:textColor="@color/text_day"
                 android:textSize="@dimen/text_size_day" />
 
-            <!--<TextView-->
-                <!--android:id="@+id/day1"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="MON"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/day2"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="TUE"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/day3"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="WED"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/day4"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="THU"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/day5"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="FRI"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/day6"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="SAT"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
-
-            <!--<TextView-->
-                <!--android:id="@+id/day7"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="SUN"-->
-                <!--android:paddingLeft="@dimen/day_padding"-->
-                <!--android:textColor="@color/text_day"-->
-                <!--android:textSize="@dimen/text_size_day" />-->
         </LinearLayout>
     </LinearLayout>
 
