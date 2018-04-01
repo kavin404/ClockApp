@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ClockApp.iml" filepath="$PROJECT_DIR$/ClockApp.iml" />
+      <module fileurl="file://C:\Users\vpered2\Documents\ClockApp\ClockApp.iml" filepath="C:\Users\vpered2\Documents\ClockApp\ClockApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\vpered2\Documents\ClockApp\app\app.iml" filepath="C:\Users\vpered2\Documents\ClockApp\app\app.iml" />
     </modules>
   </component>
 </project>

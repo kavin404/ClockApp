@@ -48,7 +48,7 @@ public class AlarmFragment extends Fragment implements RecyclerItemTouchHelperLi
             }
         });
         String header,description ;
-        for(int i=0;i<4;i++){
+        for(int i=0;i<1;i++){
             header = "12:45 AM";
             description = " Affrica ";
             WorldClockListItem li = new WorldClockListItem(header,description,true);
