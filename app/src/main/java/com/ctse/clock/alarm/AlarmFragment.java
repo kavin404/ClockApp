@@ -67,8 +67,6 @@ public class AlarmFragment extends Fragment implements RecyclerItemTouchHelperLi
             WorldClockListItem item = list.get(viewHolder.getAdapterPosition());
             int deleteIndex = viewHolder.getAdapterPosition();
             listAdapter.removeItem(deleteIndex);
-//            CoordinatorLayout root = findViewById(R.id.root_layout);
-//            Snackbar snackbar = Snackbar.make(root,"Removed from clocks ",Snackbar.LENGTH_SHORT);
         }
     }
 }

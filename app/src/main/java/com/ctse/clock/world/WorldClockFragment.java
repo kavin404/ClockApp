@@ -77,8 +77,6 @@ public class WorldClockFragment extends Fragment implements RecyclerItemTouchHel
     @Override
     public void onResume() {
         super.onResume();
-
-        Log.i("MYTAG", "Resume");
         String header, description;
         list.clear();
         for (int i = 0; i < timeZones.length; i++) {
@@ -96,8 +94,6 @@ public class WorldClockFragment extends Fragment implements RecyclerItemTouchHel
     @Override
     public void onStart() {
         super.onStart();
-
-        Log.i("MYTAG", "STart");
     }
 
     @Override

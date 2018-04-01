@@ -37,7 +37,6 @@ public class AddNewWorldClock extends AppCompatActivity {
             recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         }
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        String header, description;
         for (int i = 0; i < country.length; i++) {
             list.add(new CountryItem(country[i], timeZones[i], db.read(country[i])));
         }
