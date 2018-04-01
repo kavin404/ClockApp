@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextClock
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="hh : mm : ss a"
+                android:textColor="@color/text"
+                android:textSize="60sp" />
+
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextClock
+                android:id="@+id/day0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="dd MMM yyyy"
+                android:paddingRight="10dp"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="MON"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="TUE"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="WED"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="THU"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="FRI"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="SAT"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+
+            <TextView
+                android:id="@+id/day7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/day_padding"
+                android:text="SUN"
+                android:textColor="@color/text_day"
+                android:textSize="@dimen/text_size_day" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
