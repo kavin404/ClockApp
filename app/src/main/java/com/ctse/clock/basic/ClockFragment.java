@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextClock;
 
 import com.ctse.clock.R;
 
@@ -35,14 +36,9 @@ public class ClockFragment extends Fragment implements Runnable {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.clock_fragment,container,false);
         mTime = new Time();
-
-//        l = v.findViewById(R.id.linearLayout);
-//        mTime.setToNow();
-//        dv = new ClockFragment.drawingView(v.getContext(),mTime.hour,mTime.minute,mTime.second,mTime.weekDay,mTime.monthDay,getBatteryLevel());
-//        l.addView(dv);
-//
-//        handler = new Handler();
-//        handler.postDelayed(this,1000);
+        ((TextClock)v.findViewById(R.id.hour)).setTimeZone("GMT+5:30");
+        ((TextClock)v.findViewById(R.id.minutes)).setTimeZone("GMT+5:30");
+        ((TextClock)v.findViewById(R.id.seconds)).setTimeZone("GMT+5:30");
         return v;
     }
 
